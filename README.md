@@ -1,13 +1,13 @@
 
 <h1 align="center">
   <br>
-  <a href="MY_LINK_PLACEHOLDER"><img src="https://raw.githubusercontent.com/Leandro-Amorim/tractian-challenge/main/images/screenshot.jpg" alt="Screenshot" width="200"></a>
+  <a href="https://tractian-challenge-leandro-amorim.vercel.app/"><img src="https://raw.githubusercontent.com/Leandro-Amorim/tractian-challenge/main/images/screenshot.jpg" alt="Screenshot"></a>
   <br>
   Tractian Front End Challenge
   <br>
 </h1>
 
-<h4 align="center">A tree view application made for Tractian's frontend challenge. You can see a working example at <a href="MY_LINK_PLACEHOLDER" target="_blank">MY_LINK_PLACEHOLDER</a>.</h4>
+<h4 align="center">A tree view application made for Tractian's frontend challenge. You can see a working example at <a href="https://tractian-challenge-leandro-amorim.vercel.app/" target="_blank">https://tractian-challenge-leandro-amorim.vercel.app</a>.</h4>
 
 <p align="center">
   <a href="#how-it-works">How it works</a> •
