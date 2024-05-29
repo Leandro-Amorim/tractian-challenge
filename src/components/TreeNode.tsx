@@ -29,9 +29,9 @@ function TreeNode({ node, style, collapsed, onCollapse, selected, onSelect }: Tr
 	componentStyle.paddingLeft = `${node.level * 20}px`;
 
 	return (
-		<div style={componentStyle} onClick={() => node.type === 'component' ? onSelect(node) : null}>
-			<div className={`p-2 flex gap-1 items-center ${selected ? 'bg-button-company-active' : ''} ${node.type === 'component' ? 'cursor-pointer' : ''}`}>
-				<IconChevronDown onClick={() => onCollapse(node, collapsed)} size={16} className={`${node.hasChildren ? 'opacity-100 cursor-pointer' : 'opacity-0'} ${collapsed ? '-rotate-90' : 'rotate-0'}`} />
+		<div style={componentStyle} onClick={() => node.type === 'component' ? onSelect(node) : node.hasChildren ? onCollapse(node, collapsed) : null}>
+			<div className={`p-2 flex gap-1 items-center ${selected ? 'bg-button-company-active' : 'hover:bg-secondary/20'} ${node.type === 'component' || node.hasChildren ? 'cursor-pointer' : ''}`}>
+				<IconChevronDown size={16} className={`${node.hasChildren ? 'opacity-100 cursor-pointer' : 'opacity-0'} ${collapsed ? '-rotate-90' : 'rotate-0'}`} />
 				{icon}
 				<span className={`line-clamp-1 ${selected ? 'text-white' : ''}`}>
 					{node.name}

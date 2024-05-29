@@ -1,4 +1,4 @@
-import { IconLoader2, IconSearch } from "@tabler/icons-react";
+import { IconLoader2, IconSearch, IconXboxX } from "@tabler/icons-react";
 import { IComponentNode, ITreeNode } from "../types/TreeNodes";
 import TreeNode from "./TreeNode";
 import { useRecoilState } from "recoil";
@@ -44,8 +44,10 @@ export default function TreeViewer({ list, isError, isLoading }: { list: ITreeNo
 
 			<div className="flex items-center border-b border-border">
 				<input className="w-full p-3 outline-none" placeholder="Search Asset or Location" value={search.query} onChange={(e) => setSearch((prev) => ({ ...prev, query: e.target.value }))} />
-				<div className="h-full aspect-square flex items-center justify-center">
-					<IconSearch size={16} />
+				<div className={`h-full aspect-square flex items-center justify-center ${search.query ? 'cursor-pointer' : 'cursor-default'}`} onClick={() => setSearch((prev) => ({ ...prev, query: '' }))}>
+					{
+						search.query ? <IconXboxX size={20} className="text-secondary"/> : <IconSearch size={16} />
+					}
 				</div>
 			</div>
 
