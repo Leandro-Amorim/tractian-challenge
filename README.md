@@ -27,7 +27,8 @@
 * All rows in the list are memoized to prevent unnecessary rerenders;
 * The list is virtualized so that only components being displayed on the screen are rendered;
 * Fully responsive layout;
-* Buttons to collapse or expand all rows.
+* Buttons to collapse or expand all rows;
+* Unit tests (basic snapshot test for the main React component and unit tests for all the functions involved in creating and filtering the tree).
 
 ## Setup
 
@@ -62,3 +63,4 @@ This project uses the following open source software:
 - [Recoil](https://recoiljs.org/) - To manage the application state.
 - [TanStack Query](https://tanstack.com/query) - To obtain API data easily, with caching and revalidation included.
 - [React Window](https://github.com/bvaughn/react-window) - To virtualize the elements of the list and make it possible to view a large amount of data.
+- [Jest](https://jestjs.io/) - For creating unit tests.

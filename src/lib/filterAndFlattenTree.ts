@@ -13,7 +13,7 @@ export default function filterAndFlattenTree(tree: ITreeNode[], query: ISearch) 
 	return flattenedList;
 }
 
-function filterNode(node: ITreeNode, query: ISearch, fatherShowing: boolean = false) {
+export function filterNode(node: ITreeNode, query: ISearch, fatherShowing: boolean = false) {
 
 	const nameCheck = fatherShowing || node.name.toLowerCase().includes(query.query.toLowerCase());
 
@@ -40,7 +40,7 @@ function filterNode(node: ITreeNode, query: ISearch, fatherShowing: boolean = fa
 	return null;
 }
 
-function flattenTree(node: ITreeNode | null, result: ITreeNode[], query: ISearch): void {
+export function flattenTree(node: ITreeNode | null, result: ITreeNode[], query: ISearch): void {
 	if (node) {
 		result.push({ ...node });
 		if (isCollapsed(node, query)) return;
