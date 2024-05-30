@@ -15,7 +15,7 @@ export default function filterAndFlattenTree(tree: ITreeNode[], query: ISearch) 
 
 function filterNode(node: ITreeNode, query: ISearch, fatherShowing: boolean = false) {
 
-	const nameCheck = node.name.toLowerCase().includes(query.query.toLowerCase()) || fatherShowing;
+	const nameCheck = fatherShowing || node.name.toLowerCase().includes(query.query.toLowerCase());
 
 	let passing = nameCheck;
 
