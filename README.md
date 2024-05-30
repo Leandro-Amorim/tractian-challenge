@@ -28,7 +28,8 @@
 * The list is virtualized so that only components being displayed on the screen are rendered;
 * Fully responsive layout;
 * Buttons to collapse or expand all rows;
-* Unit tests (basic snapshot test for the main React component and unit tests for all the functions involved in creating and filtering the tree).
+* Unit tests (basic snapshot test for the main React component and unit tests for all the functions involved in creating and filtering the tree);
+* Unit tests run automatically on push with GitHub Actions.
 
 ## Setup
 
